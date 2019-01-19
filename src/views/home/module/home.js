@@ -3,6 +3,14 @@ import service from '../../../util/service'
 const FETCH_DATA = "FETCH_DATA"
 const LOADER = "LOADER"
 
+
+export function showLoader(value){
+    return {
+        type: LOADER,
+        payload: value
+    }
+}
+
 export function fetchData() {
     return (dispatch) => {
         dispatch({

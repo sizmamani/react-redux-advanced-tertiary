@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { 
-  fetchData
+  fetchData,
+  showLoader
 } from './module/home'
 import HomeContainer from './container'
 
@@ -13,7 +14,8 @@ function mapStateToProps(state) {
 }
 
 const mapDispatchToProps = {
-    fetchData
+    fetchData,
+    showLoader
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)

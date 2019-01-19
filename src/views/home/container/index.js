@@ -7,12 +7,19 @@ class HomeContainer extends React.Component{
         super()
        
     }
+    componentDidMount(){
+        console.log("I did mount")
+    }
     componentWillMount(){
+        console.log("I will mount")
         this.props.fetchData()
+    }
+    componentWillReceiveProps(newProps){
+        console.log(">>>>>>>>>>>>>>>",newProps)
     }
     render(){
         return (
-            <HomeComponent movie={this.props.movie}/>
+            <HomeComponent {...this.props}/>
         )
     }
 }
